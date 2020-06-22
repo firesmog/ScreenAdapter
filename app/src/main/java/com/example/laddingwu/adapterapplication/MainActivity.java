@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 DisplayMetrics dm = new DisplayMetrics();
                 getWindowManager().getDefaultDisplay().getMetrics(dm);
                 int width = Math.min(dm.widthPixels,dm.heightPixels);
-                tv1.setText("dpi : "+dm.densityDpi +"   smallest width pixels : "+width);
+                tv1.setText("dpi : "+dm.densityDpi +"   smallest width pixels : "+ dm.widthPixels  + ",height = " +  dm.heightPixels);
                 tv2.setText("计算出来的smallestWidth : "+width/(dm.densityDpi/160.0) +"dp");
                 tv3.setText("实际使用的smallestWidth :  "+getResources().getString(R.string.base_dpi));
                 tv4.setText("当前手机： "+SystemUtil.getDeviceBrand()+"  "+SystemUtil.getSystemModel()+ " \n"+"当前系统： "+SystemUtil.getSystemVersion()+ " ");

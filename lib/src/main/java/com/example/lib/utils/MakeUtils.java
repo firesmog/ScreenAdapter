@@ -21,7 +21,7 @@ public class MakeUtils {
 
    
     private static final String XML_BASE_DPI = "<dimen name=\"base_dpi\">%ddp</dimen>\r\n";
-    private  static final int MAX_SIZE = 720;
+    private  static final int MAX_SIZE = 800;
 
     /**
      * 生成的文件名
@@ -38,7 +38,6 @@ public class MakeUtils {
     
 
     /**
-     * 生成所有的尺寸数据
      *
      * @param type
      * @return
@@ -50,7 +49,6 @@ public class MakeUtils {
         try {
             sb.append(XML_HEADER);
             sb.append(XML_RESOURCE_START);
-            //备份生成的相关信息
             temp = String.format(XML_BASE_DPI, type.getSwWidthDp());
             sb.append(temp);
             for (int i = 0; i <= MAX_SIZE; i++) {
